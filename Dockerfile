@@ -7,3 +7,7 @@ RUN echo "http://nl.alpinelinux.org/alpine/latest-stable/main" > /etc/apk/reposi
 && echo "http://nl.alpinelinux.org/alpine/edge/community/" >> /etc/apk/repositories \
 && echo "nameserver 8.8.8.8" >> /etc/resolv.conf && apk update && apk upgrade
 
+
+ENV WORK_DIR /work/
+WORKDIR $WORK_DIR
+
