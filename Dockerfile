@@ -10,4 +10,6 @@ RUN echo "http://nl.alpinelinux.org/alpine/latest-stable/main" > /etc/apk/reposi
 
 ENV WORK_DIR /work/
 WORKDIR $WORK_DIR
+RUN mkdir -p $WORK_DIR
+RUN chmod 777 -R $WORK_DIR
 
